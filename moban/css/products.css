@@ -1,0 +1,82 @@
+@charset "UTF-8"; 
+/*左边黑框描述，右边图片block样式*/
+.category-banner-content-block__content {
+	background-color: #666666;
+	padding-top: 5%;
+	height: 400px;
+}
+.category-banner-content-block__image {
+	height: 400px;
+	background-image:url("/images/products_list/banner.jpg");
+	background-size: cover;
+}
+.category-banner-content-block__title {
+	font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.category-banner-content-block__description {
+	margin: 16px 0 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.category-banner-content-block__value-add {
+	margin: 16px 0 0;
+    font-size: 16px;
+    color: #fff;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    text-align: center;
+}
+/*filter 样式*/
+.filter {
+	height: 50px;
+	margin-top: 20px;
+    margin-bottom: 20px;	
+}
+.filter div {
+	height: 100%;
+}
+.filter div span {
+	display: inline-block;
+	height: 100%;
+	line-height: 50px;
+}
+.filter-part {
+	text-align: center;
+}
+.filter-input span {
+	width: 100%;
+	border: 1px solid #000;
+    border-radius: 5px;
+}
+.filter-title {
+	font-weight: bold;
+	font-size: 20px;
+}
+/*products list页面手机端样式*/
+@media ( max-width:767px ) {
+  /*左边黑框描述，右边图片block样式*/
+  .category-banner-content-block__content {
+  	padding-top: 2em;
+  }
+  .category-banner-content-block__content h1 {
+  	font-size: 2.5em;
+  }
+  .category-banner-content-block__content p {
+  	font-size: 1.5em;
+  }
+}
+@media ( max-width:320px) {
+  /*左边黑框描述，右边图片block样式*/
+  .category-banner-content-block__content h1 {
+  	font-size: 1em;
+  }
+  .category-banner-content-block__content h1 {
+  	font-size: 2em;
+  }
+  .category-banner-content-block__content p {
+  	font-size: 1em;
+  }
+}
