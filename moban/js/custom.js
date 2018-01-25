@@ -108,4 +108,25 @@ $(function(){
 	   	  $(".about-help.foder").slideToggle(300);
 	   });
    }
+
+   /*product list 页面 filter 展开*/
+   $(".filter-deliver-time").mouseover(function(){
+      $(".filter-deliver-time .input-choice").css("display","block");
+      $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-down");
+      $(".filter-deliver-time .filter-input-icon").addClass("glyphicon-menu-up");
+   });
+   $(".filter-deliver-time").mouseout(function(){
+      $(".filter-deliver-time .input-choice").css("display","none");
+      $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-up");
+      $(".filter-deliver-time .filter-input-icon").addClass("glyphicon-menu-down");
+   });
+
+   $(".filter-flower-type").mouseover(function() {
+   	  $(".filter-flower-type .dynamic-span").css("height","150%");
+   	  $(".input-choice-two").css("display","block");
+   });
+   $(".filter-flower-type").mouseout(function() {
+   	  $(".filter-flower-type .dynamic-span").css("height","100%");
+   	  $(".input-choice-two").css("display","none");
+   });
 })
