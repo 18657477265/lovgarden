@@ -135,9 +135,14 @@
     color: orange;
     border-color: orange;
   }
-  /*filter 花品种选择框*/
-  .filter-flower-type .input-choice-two {
-    height: 300px;
+  .input-choice .result-filters__list .filter-deliver-time-item-choosen {
+    text-decoration: none;
+    color: orange;
+    border-color: orange;
+  }
+  /*filter 花品种选择框 情景选择继承 鲜花色系继承*/
+  .filter-flower-type .input-choice-two , .filter-flower-hoilday .input-choice-three , .filter-flower-color .input-choice-four {
+    height: auto;
     width: 168%;
     padding: 0;
     border: 1px solid #000;
@@ -147,30 +152,77 @@
     border-top: none;
     display: none;
   }
-  .flower-type-list {
+  .flower-type-list , .flower-holiday-list , .flower-color-list {
     padding: 0;
     list-style: none;
-    height: 300px;
+    height: auto;
   }
-  .flower-type-list-item {
+  .flower-type-list-item , .flower-holiday-list-item , .flower-color-list-item {
     height: 30px;
     line-height: 30px;
+    padding-left: 12%;
   }
-  .flower-type-list-item a {
+  .flower-type-list-item a , .flower-holiday-list-item a , .flower-color-list-item a {
     display: inline-block;
     width: 100%;
     height: 20px;
     line-height: 20px;
-    background-color: red;
+    background-image: url("/images/products_list/checkbox.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 0px -39px;
   }
-  .flower-type-list-one {
+  .flower-type-list-item a:hover {
+    background-position: 0px -1px;
+    color: orange;
+    text-decoration: none;
+  }
+  .flower-holiday-list-item a:hover {
+    background-position: 0px -1px;
+    color: orange;
+    text-decoration: none;
+  }
+  .flower-color-list-item a:hover {
+    background-position: 0px -1px;
+    color: orange;
+    text-decoration: none;
+  }
+  .filter-flower-type .flower-type-list-item .flower-type-list-item-choosen , .filter-flower-hoilday .flower-holiday-list-item .flower-holiday-list-item-choosen {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background-image: url("/images/products_list/checkbox.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 0px -1px;
+    color: orange;
+    text-decoration: none;
+  }
+  ..filter-flower-color .flower-color-list-item .flower-color-list-item-choosen {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background-image: url("/images/products_list/checkbox.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 0px -1px;
+    color: orange;
+    text-decoration: none;
+  }
+  .flower-type-list-one , .flower-holiday-list-one , .flower-color-list-one {
     border-top: 1px solid #fff;
     padding-top: 20px;
   }
-  .flower-type-list-two {
+  .flower-type-list-two , .flower-holiday-list-two , .flower-color-list-two {
     border-top: 1px solid #000;
     padding-top: 20px;
   }
+}
+/*filter 情景选择*/
+.filter-flower-hoilday .input-choice-three , .filter-flower-color .input-choice-four {
+  height: auto;
 }
 /*products list页面平板端样式*/
 @media ( min-width:768px ) and ( max-width:1199px ) {

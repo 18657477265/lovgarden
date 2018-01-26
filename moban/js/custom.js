@@ -120,7 +120,7 @@ $(function(){
       $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-up");
       $(".filter-deliver-time .filter-input-icon").addClass("glyphicon-menu-down");
    });
-
+   //花材种类
    $(".filter-flower-type").mouseover(function() {
    	  $(".filter-flower-type .dynamic-span").css("height","150%");
    	  $(".input-choice-two").css("display","block");
@@ -129,4 +129,23 @@ $(function(){
    	  $(".filter-flower-type .dynamic-span").css("height","100%");
    	  $(".input-choice-two").css("display","none");
    });
+   //用花情景
+   $(".filter-flower-hoilday").mouseover(function() {
+   	  $(".filter-flower-hoilday .dynamic-span-holiday").css("height","150%");
+   	  $(".input-choice-three").css("display","block");
+   });
+   $(".filter-flower-hoilday").mouseout(function() {
+   	  $(".filter-flower-hoilday .dynamic-span-holiday").css("height","100%");
+   	  $(".input-choice-three").css("display","none");
+   });
+   //鲜花色系
+   $(".filter-flower-color").mouseover(function() {
+   	  $(".filter-flower-color .dynamic-span-color").css("height","150%");
+   	  $(".input-choice-four").css("display","block");
+   });
+   $(".filter-flower-color").mouseout(function() {
+   	  $(".filter-flower-color .dynamic-span-color").css("height","100%");
+   	  $(".input-choice-four").css("display","none");
+   });
+
 })
