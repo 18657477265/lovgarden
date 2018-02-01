@@ -447,6 +447,9 @@ body a {
     .footer ul li:hover {
       color: orange;
     }
+    .show-tablet-mobile {
+      display: block;
+    }
 }
 /*平板移动端代码*/
 @media ( min-width:768px ) and ( max-width:1199px ) {
@@ -673,6 +676,9 @@ body a {
   .footer ul li a:hover {
     color: orange;
   }
+  .show-tablet-mobile {
+      display: block;
+    }
 }
 
 /*PC 端代码*/
@@ -862,6 +868,9 @@ body a {
   .footer ul li a:hover {
     color: orange;
   }
+  .show-tablet-mobile {
+      display: none;
+    }
 }
 
 /*小屏手机*/

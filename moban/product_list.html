@@ -185,7 +185,7 @@
    </div>
 
    <!-- filter -->
-   <div class="container filter">
+   <div class="container filter show-pc">
      <div class="col-md-1 col-sm-1 filter-part">
        <span class="filter-title">筛选</span>
      </div>
@@ -321,30 +321,30 @@
        <div class="input-choice-four">
          <ul class="flower-color-list flower-color-list-one col-md-6">
             <li class="flower-color-list-item">
-               <a>纪念日</a>
+               <a class="pink">Pinks</a>
             </li>
             <li class="flower-color-list-item">
-               <a class="flower-color-list-item-choosen">onetwo</a>
+               <a class="flower-color-list-item-choosen purple">Purples</a>
             </li>
             <li class="flower-color-list-item">
-               <a>onetwo</a>
+               <a class="yellow">Yellows</a>
             </li>
             <li class="flower-color-list-item">
-               <a>onetwo</a>
+               <a class="orange">Oranges</a>
             </li>
         </ul>
         <ul class="flower-color-list flower-color-list-two col-md-6">
             <li class="flower-color-list-item">
-               <a>onetwo</a>
+               <a class="assorted">Assorted</a>
             </li>
             <li class="flower-color-list-item">
-               <a>onetwo</a>
+               <a class="white">Whites</a>
             </li>
             <li class="flower-color-list-item">
-               <a>onetwo</a>
+               <a class="red">Reds</a>
             </li>
             <li class="flower-color-list-item">
-               <a>onetwo</a>
+               <a class="green">Greens</a>
             </li>
         </ul>
        </div>
@@ -353,10 +353,94 @@
      <div class="col-md-1 col-sm-1 filter-part">
        <span class="filter-title">排序</span>
      </div>
-     <div class="col-md-2 col-sm-2 filter-part filter-input">
-       <span><a>Featured</a></span><span class="glyphicon glyphicon-menu-down filter-input-icon"></span>
+     <div class="col-md-2 col-sm-2 filter-part filter-input filter-order">
+       <span><a>排序</a></span><span class="glyphicon glyphicon-menu-down filter-input-icon"></span>
+       <div class="input-choice order-list">
+         <ul class="result-filters__list">
+           <li>
+             <a class="filter-deliver-time-dropdown-a" href="#">热销</a>
+           </li>
+           <li>
+             <a class="filter-deliver-time-dropdown-a filter-deliver-time-item-choosen" href="#">价格</a>
+           </li>
+           <li>
+             <a class="filter-deliver-time-dropdown-a" href="#">最新款</a>
+           </li>
+         </ul>
+       </div>
      </div>
    </div>
+   <!--filter mobile and tablet -->
+   <div class="container show-tablet-mobile">
+   	<div class="col-xs-12 col-sm-12 mobile-filter">
+   		<span class="mobile-filter-name">筛选 +</span>
+   	</div>
+   </div>
+   <!--filter 弹出框-->
+   <div id="mobile-filter-section" class="show-tablet-mobile">
+	  <section id="shop-filter-popup">
+	  	<p class="filter-mobile-popup-title"><span class="choose-title">筛选</span><span class="choose-close glyphicon glyphicon-remove"></span></p>
+	  	<p class="filter-mobile-popup-delivertime">配送时间<span class="glyphicon glyphicon-plus"></span></p>
+	  	<ul class="filter-mobile-popup-delivertime-choice">
+	      <li class="col-sm-6 col-xs-6"><a>越快越好</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="mobile-tablet-filter-choosen">按计划来</a></li>
+	    </ul>
+	  	<p class="filter-mobile-popup-flowertype">花材种类<span class="glyphicon glyphicon-plus"></span></p>
+	  	<ul class="filter-mobile-popup-flowertype-choice">
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="mobile-tablet-filter-choosen">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	    </ul>
+	  	<p class="filter-mobile-popup-occasion">使用情景<span class="glyphicon glyphicon-plus"></span></p>
+	  	<ul class="filter-mobile-popup-occasion-choice">
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">选择一个</a></li>
+	    </ul>
+	  	<p class="filter-mobile-popup-flower-color">鲜花色系<span class="glyphicon glyphicon-plus"></span></p>
+	  	<ul class="filter-mobile-popup-flower-color-choice">
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="pink">粉色</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="assorted">炫彩</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="purple">紫色</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">白色</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="yellow">金色</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="red">红色</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="green">绿色</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#" class="orange">橙色</a></li>
+	    </ul>
+	  	<p class="filter-mobile-popup-order">排序选择<span class="glyphicon glyphicon-plus"></span></p>
+	  	<ul class="filter-mobile-popup-order-choice">
+	      <li class="col-sm-6 col-xs-6"><a href="#">价格</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">最新</a></li>
+	      <li class="col-sm-6 col-xs-6"><a href="#">热销</a></li>
+	    </ul>
+	  </section>
+  </div>
+
    <!--block 底座-->
    <div class="container footer wow slideInUp" data-wow-offset="30" style="margin-top: 500px;">
    		<div class="col-md-3 col-sm-3">

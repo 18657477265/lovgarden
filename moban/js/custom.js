@@ -21,11 +21,152 @@ $(function(){
 	   $("#shop-menu-dropdown").hover(function(){ },function() {
 	   	  $("#shop-menu-dropdown").css("display","none");
 	   });
+
+	   /*product list 页面 filter 展开*/
+	   $(".filter-deliver-time").mouseover(function(){
+	      $(".filter-deliver-time .input-choice").css("display","block");
+	      $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+	   });
+	   $(".filter-deliver-time").mouseout(function(){
+	      $(".filter-deliver-time .input-choice").css("display","none");
+	      $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+	   });
+	   //花材种类
+	   $(".filter-flower-type").mouseover(function() {
+	   	  $(".filter-flower-type .dynamic-span").css("height","150%");
+	   	  $(".input-choice-two").css("display","block");
+	   	  $(".filter-flower-type .filter-input-icon").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+	   });
+	   $(".filter-flower-type").mouseout(function() {
+	   	  $(".filter-flower-type .dynamic-span").css("height","100%");
+	   	  $(".input-choice-two").css("display","none");
+	   	  $(".filter-flower-type .filter-input-icon").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+	   });
+	   //用花情景
+	   $(".filter-flower-hoilday").mouseover(function() {
+	   	  $(".filter-flower-hoilday .dynamic-span-holiday").css("height","150%");
+	   	  $(".input-choice-three").css("display","block");
+	   	  $(".filter-flower-hoilday .filter-input-icon").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+	   });
+	   $(".filter-flower-hoilday").mouseout(function() {
+	   	  $(".filter-flower-hoilday .dynamic-span-holiday").css("height","100%");
+	   	  $(".input-choice-three").css("display","none");
+	   	  $(".filter-flower-hoilday .filter-input-icon").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+	   });
+	   //鲜花色系
+	   $(".filter-flower-color").mouseover(function() {
+	   	  $(".filter-flower-color .dynamic-span-color").css("height","150%");
+	   	  $(".input-choice-four").css("display","block");
+	   	  $(".filter-flower-color .filter-input-icon").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+	   });
+	   $(".filter-flower-color").mouseout(function() {
+	   	  $(".filter-flower-color .dynamic-span-color").css("height","100%");
+	   	  $(".input-choice-four").css("display","none");
+	   	  $(".filter-flower-color .filter-input-icon").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+	   });
+
+	   //产品排序
+	   $(".filter-order").mouseover(function(){
+	      $(".filter-order .input-choice").css("display","block");
+	      $(".filter-order .filter-input-icon").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+	   });
+	   $(".filter-order").mouseout(function(){
+	      $(".filter-order .input-choice").css("display","none");
+	      $(".filter-order .filter-input-icon").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+	   });
    }
    else if(device == 'tablet') {
 	   $('#shop-market').on('click',function(e) { 
 	      $("#shop-menu-dropdown").slideToggle(500);
 	   });
+
+	   function close_other_filter_category(except_itself) {
+          $("#shop-filter-popup ul").each(function(){
+             if(!$(this).hasClass(except_itself)) {
+             	var icon_span = $(this).prev().children("span");
+                if(icon_span.hasClass("glyphicon-minus")) {
+                    $(this).slideUp(300);
+                    icon_span.removeClass("glyphicon-minus");
+	   	  	        icon_span.addClass("glyphicon-plus");
+                }
+             }
+          });
+	   }
+	   //product filter
+	   $('.filter-mobile-popup-delivertime').on('click',function() {
+	   	  if($('.filter-mobile-popup-delivertime span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-delivertime span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-delivertime span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-delivertime span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-delivertime span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-delivertime-choice");
+	   	  $(".filter-mobile-popup-delivertime-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-flowertype').on('click',function() {
+	   	  if($('.filter-mobile-popup-flowertype span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-flowertype span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-flowertype span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-flowertype span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-flowertype span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-flowertype-choice");
+	   	  $(".filter-mobile-popup-flowertype-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-occasion').on('click',function() {
+	   	  if($('.filter-mobile-popup-occasion span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-occasion span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-occasion span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-occasion span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-occasion span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-occasion-choice");
+	   	  $(".filter-mobile-popup-occasion-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-flower-color').on('click',function() {
+	   	  if($('.filter-mobile-popup-flower-color span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-flower-color span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-flower-color span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-flower-color span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-flower-color span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-flower-color-choice");
+	   	  $(".filter-mobile-popup-flower-color-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-order').on('click',function() {
+	   	  if($('.filter-mobile-popup-order span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-order span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-order span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-order span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-order span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-order-choice");
+	   	  $(".filter-mobile-popup-order-choice").slideToggle(300);
+	   });
+
+	   /*关闭按钮*/
+	   $('.filter-mobile-popup-title').on('click',function() {
+          $('#mobile-filter-section').fadeOut(300);
+	   });
+	   /*开启按钮*/
+	   $(".mobile-filter").on('click',function() {
+          $('#mobile-filter-section').fadeIn(300);
+	   });
+
    }
    else if (device == 'mobile') {
 	   $('.mobile-menu-show').on('click',function(e) {
@@ -107,45 +248,94 @@ $(function(){
 	   	  }
 	   	  $(".about-help.foder").slideToggle(300);
 	   });
+
+	   //filter mobile js
+	   function close_other_filter_category(except_itself) {
+          $("#shop-filter-popup ul").each(function(){
+             if(!$(this).hasClass(except_itself)) {
+             	var icon_span = $(this).prev().children("span");
+                if(icon_span.hasClass("glyphicon-minus")) {
+                    $(this).slideUp(300);
+                    icon_span.removeClass("glyphicon-minus");
+	   	  	        icon_span.addClass("glyphicon-plus");
+                }
+             }
+          });
+	   }
+	   //product filter
+	   $('.filter-mobile-popup-delivertime').on('click',function() {
+	   	  if($('.filter-mobile-popup-delivertime span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-delivertime span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-delivertime span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-delivertime span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-delivertime span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-delivertime-choice");
+	   	  $(".filter-mobile-popup-delivertime-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-flowertype').on('click',function() {
+	   	  if($('.filter-mobile-popup-flowertype span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-flowertype span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-flowertype span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-flowertype span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-flowertype span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-flowertype-choice");
+	   	  $(".filter-mobile-popup-flowertype-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-occasion').on('click',function() {
+	   	  if($('.filter-mobile-popup-occasion span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-occasion span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-occasion span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-occasion span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-occasion span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-occasion-choice");
+	   	  $(".filter-mobile-popup-occasion-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-flower-color').on('click',function() {
+	   	  if($('.filter-mobile-popup-flower-color span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-flower-color span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-flower-color span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-flower-color span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-flower-color span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-flower-color-choice");
+	   	  $(".filter-mobile-popup-flower-color-choice").slideToggle(300);
+	   });
+
+	   $('.filter-mobile-popup-order').on('click',function() {
+	   	  if($('.filter-mobile-popup-order span').hasClass("glyphicon-plus")) {
+	   	  	$('.filter-mobile-popup-order span').removeClass("glyphicon-plus");
+	   	  	$('.filter-mobile-popup-order span').addClass("glyphicon-minus");
+	   	  }
+	   	  else {
+	   	  	$('.filter-mobile-popup-order span').removeClass("glyphicon-minus");
+	   	  	$('.filter-mobile-popup-order span').addClass("glyphicon-plus");
+	   	  }
+	   	  close_other_filter_category("filter-mobile-popup-order-choice");
+	   	  $(".filter-mobile-popup-order-choice").slideToggle(300);
+	   });
+
+	   /*关闭按钮*/
+	   $('.filter-mobile-popup-title').on('click',function() {
+          $('#mobile-filter-section').fadeOut(300);
+	   });
+	   /*开启按钮*/
+	   $(".mobile-filter").on('click',function() {
+          $('#mobile-filter-section').fadeIn(300);
+	   });
+
    }
-
-   /*product list 页面 filter 展开*/
-   $(".filter-deliver-time").mouseover(function(){
-      $(".filter-deliver-time .input-choice").css("display","block");
-      $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-down");
-      $(".filter-deliver-time .filter-input-icon").addClass("glyphicon-menu-up");
-   });
-   $(".filter-deliver-time").mouseout(function(){
-      $(".filter-deliver-time .input-choice").css("display","none");
-      $(".filter-deliver-time .filter-input-icon").removeClass("glyphicon-menu-up");
-      $(".filter-deliver-time .filter-input-icon").addClass("glyphicon-menu-down");
-   });
-   //花材种类
-   $(".filter-flower-type").mouseover(function() {
-   	  $(".filter-flower-type .dynamic-span").css("height","150%");
-   	  $(".input-choice-two").css("display","block");
-   });
-   $(".filter-flower-type").mouseout(function() {
-   	  $(".filter-flower-type .dynamic-span").css("height","100%");
-   	  $(".input-choice-two").css("display","none");
-   });
-   //用花情景
-   $(".filter-flower-hoilday").mouseover(function() {
-   	  $(".filter-flower-hoilday .dynamic-span-holiday").css("height","150%");
-   	  $(".input-choice-three").css("display","block");
-   });
-   $(".filter-flower-hoilday").mouseout(function() {
-   	  $(".filter-flower-hoilday .dynamic-span-holiday").css("height","100%");
-   	  $(".input-choice-three").css("display","none");
-   });
-   //鲜花色系
-   $(".filter-flower-color").mouseover(function() {
-   	  $(".filter-flower-color .dynamic-span-color").css("height","150%");
-   	  $(".input-choice-four").css("display","block");
-   });
-   $(".filter-flower-color").mouseout(function() {
-   	  $(".filter-flower-color .dynamic-span-color").css("height","100%");
-   	  $(".input-choice-four").css("display","none");
-   });
-
 })
