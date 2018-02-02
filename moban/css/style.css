@@ -450,6 +450,10 @@ body a {
     .show-tablet-mobile {
       display: block;
     }
+    .show-tablet-pc {
+      display: none;
+    }
+
 }
 /*平板移动端代码*/
 @media ( min-width:768px ) and ( max-width:1199px ) {
@@ -679,6 +683,9 @@ body a {
   .show-tablet-mobile {
       display: block;
     }
+    .show-tablet-pc {
+      display: block;
+    }
 }
 
 /*PC 端代码*/
@@ -871,6 +878,9 @@ body a {
   .show-tablet-mobile {
       display: none;
     }
+    .show-tablet-pc {
+      display: block;
+    }
 }
 
 /*小屏手机*/
@@ -948,6 +958,9 @@ body a {
     /*banner 左侧边框栏描述款*/
     .banner .left-square h4 {
   	    text-align: center;
+    }
+    .show-tablet-pc {
+      display: none;
     }
 }
 

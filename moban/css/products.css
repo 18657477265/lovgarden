@@ -329,6 +329,99 @@
     color: orange !important;
     border-color: orange !important;
   }
+   /*product list 样式 手机端*/
+  .pagination-results {
+    padding: 0;
+  }
+  .product-grid {
+    list-style: none;
+    height: auto;
+    padding: 0;
+  }
+  .product-grid li {
+    padding: 0;
+  }
+  .product-summary__media-link img {
+    width: 100%;
+  }
+  .product-summary__info .product-summary__name {
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .product-summary__info .product-summary__short-description p {
+    font-size: 12px;
+    height: 20px;
+    color: grey;
+    width: 100%;
+    border: none;
+    text-align: center;
+    margin: 0;
+  }
+  .product-summary__availability .product-summary__availability-label {
+    font-size: 12px;
+    color: #333333;
+    color: grey;
+    text-align: center;
+  }
+  .product-summary__availability .product-summary__availability-date {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .product-grid .product-summary {
+    position: relative;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__pricing {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 13px;
+    width: 60px;
+    height: 33px;
+    line-height: 33px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer {
+    position: absolute;
+    top: 80%;
+    right: 0px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-image {
+    text-align: right;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-title {
+    font-size: 10px;
+    text-align: right;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-location {
+    font-size: 10px;
+    text-align: right;
+  }
+  .price__unit , .price__number {
+    font-size: 18px;
+  }
+  .small-start {
+    font-size: 5px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__availability .product-summary__availability-date {
+    font-size: 13px;
+  }
+  .input-choice-two , .input-choice-three ,.input-choice-four {
+    z-index: 99;
+  }
+  .product-grid .product-grid__cell {
+    padding: 0 10px 40px 10px;
+  }
+  .product-summary a:active {
+     color: orange;
+     text-decoration: none;
+  }
+  .product-summary a:hover {
+    color: orange;
+    text-decoration: none;
+  }
 }
 @media ( max-width:320px) {
   /*左边黑框描述，右边图片block样式*/
@@ -769,6 +862,92 @@
   .filter-order .order-list {
     width: 84%;
   }
+  /*product list 样式 PC*/
+  .pagination-results {
+    padding: 0;
+  }
+  .product-grid {
+    list-style: none;
+    height: auto;
+    padding: 0;
+  }
+  .product-grid li {
+    padding: 0;
+  }
+  .product-summary__media-link img {
+    width: 100%;
+  }
+  .product-summary__info .product-summary__name {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .product-summary__info .product-summary__short-description p {
+    font-size: 12px;
+    width: 80%;
+    height: 30px;
+    border-bottom: 1px solid #d5d5d5;
+    color: grey;
+  }
+  .product-summary__availability .product-summary__availability-label {
+    font-size: 12px;
+    color: #333333;
+    color: grey;
+  }
+  .product-summary__availability .product-summary__availability-date {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .product-grid .product-summary {
+    position: relative;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__pricing {
+    position: absolute;
+    top: 60%;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    font-size: 15px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer {
+    position: absolute;
+    top: 86%;
+    right: 0px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-image {
+    text-align: right;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-title {
+    font-size: 10px;
+    text-align: right;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-location {
+    font-size: 10px;
+    text-align: right;
+  }
+  .price__unit , .price__number {
+    font-size: 30px;
+  }
+  .small-start {
+    font-size: 10px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__availability .product-summary__availability-date {
+    font-size: 13px;
+  }
+  .input-choice-two , .input-choice-three ,.input-choice-four {
+    z-index: 99;
+  }
+  .product-grid .product-grid__cell {
+    padding: 0 10px 50px 10px;
+  }
+  .product-summary a:active {
+     color: orange;
+     text-decoration: none;
+  }
+  .product-summary a:hover {
+    color: orange;
+    text-decoration: none;
 }
 /*products list页面平板端样式*/
 @media ( min-width:768px ) and ( max-width:1199px ) {
@@ -1021,5 +1200,92 @@
   .mobile-tablet-filter-choosen {
     color: orange !important;
     border-color: orange !important;
+  }
+    /*product list 样式 平板*/
+  .pagination-results {
+    padding: 0;
+  }
+  .product-grid {
+    list-style: none;
+    height: auto;
+    padding: 0;
+  }
+  .product-grid li {
+    padding: 0;
+  }
+  .product-summary__media-link img {
+    width: 100%;
+  }
+  .product-summary__info .product-summary__name {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .product-summary__info .product-summary__short-description p {
+    font-size: 12px;
+    width: 80%;
+    height: 30px;
+    border-bottom: 1px solid #d5d5d5;
+    color: grey;
+  }
+  .product-summary__availability .product-summary__availability-label {
+    font-size: 12px;
+    color: #333333;
+    color: grey;
+  }
+  .product-summary__availability .product-summary__availability-date {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .product-grid .product-summary {
+    position: relative;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__pricing {
+    position: absolute;
+    top: 48%;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    font-size: 13px;
+    width: 90px;
+    height: 45px;
+    line-height: 45px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer {
+    position: absolute;
+    top: 80%;
+    right: 0px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-image {
+    text-align: right;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-title {
+    font-size: 10px;
+    text-align: right;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__manufacturer .product-summary__manufacturer-location {
+    font-size: 10px;
+    text-align: right;
+  }
+  .price__unit , .price__number {
+    font-size: 30px;
+  }
+  .small-start {
+    font-size: 10px;
+  }
+  .product-grid .product-summary .product-summary__info .product-summary__availability .product-summary__availability-date {
+    font-size: 13px;
+  }
+  .input-choice-two , .input-choice-three ,.input-choice-four {
+    z-index: 99;
+  }
+  .product-grid .product-grid__cell {
+    padding: 0 10px 40px 10px;
+  }
+  .product-summary a:active {
+     color: orange;
+     text-decoration: none;
+  }
+  .product-summary a:hover {
+    color: orange;
+    text-decoration: none;
   }
 }
