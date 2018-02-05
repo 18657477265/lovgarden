@@ -684,6 +684,15 @@
     color: orange !important;
     border-color: orange !important;
   }
+  .product-grid .product-summary .product-summary__info .product-summary__pricing {
+    top: 40%;
+  }
+  .product-summary__availability-date {
+    padding-top: 20px;
+  }
+  .product-grid .product-grid__cell {
+    padding:0 10px 20px 10px;
+  }
 }
 /*products list页面PC端样式*/
 @media ( min-width:1200px ) {
@@ -948,6 +957,8 @@
   .product-summary a:hover {
     color: orange;
     text-decoration: none;
+    /*消除product list 的左右内边距*/
+  }
 }
 /*products list页面平板端样式*/
 @media ( min-width:768px ) and ( max-width:1199px ) {
