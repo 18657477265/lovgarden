@@ -12,6 +12,18 @@ $(function(){
 	   		return "pc";
 	   	}
    }
+   
+   //检测product detail 页面中的radio是否被选中
+   $(".product-variant-choice-border input[name='sku']").on('change',function(){
+   	$(".product-variant-choice-border input[name='sku']").each(function(){
+        if (this.checked) {
+           $(this).parent().addClass("product-variant-choice-choosen");
+        }
+        else {
+           $(this).parent().removeClass("product-variant-choice-choosen");
+        } 
+   	});
+   });
 
    var device = equipmentCheck();
    if(device == 'pc') {
