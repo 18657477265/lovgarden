@@ -24,6 +24,10 @@ $(function(){
         } 
    	});
    });
+   //product detail 页面中的datepicker点击事件
+   $("#delivery_date_catalog_product").on('change',function() {
+   	alert($(this).val());
+   })
 
    var device = equipmentCheck();
    if(device == 'pc') {

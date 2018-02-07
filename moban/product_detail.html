@@ -10,10 +10,12 @@
      <link rel="stylesheet" href="/css/animate.css"/>
      <link rel="stylesheet" href="/css/style.css"/>
      <link rel="stylesheet" href="/css/lightslider.css" />
+     <link rel="stylesheet" href="/css/calendar.css"/>
      <link rel="stylesheet" href="/css/products_detail.css"/>
      <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
      <script src="/js/lightslider.js"></script>
      <script src="/js/bootstrap.min.js"></script>
+     <script src="/js/calendar.js"></script>
 </head>
 <body class="page">
   <nav class="fixed-top">
@@ -205,8 +207,7 @@
                 <div class="product-detail-info-form-div">
                   <form class="product-detail-info-form">
                       <div class="form-name"><h4>选择一个款式</h4></div>
-                      <div class="product-details__variants product-variants">
-                        
+                      <div class="product-details__variants product-variants">                       
                         <div class="product-variants__item radio-button col-md-4 col-sm-4 col-xs-4">
                          <div class="product-variant-choice-border">
                           <input type="radio" name="sku" id="sku_80194601" value="80194601" required="required" class="product-variants__input radio-button__input">
@@ -230,7 +231,6 @@
                             </label>
                           </div>
                         </div>
-
                         <div class="product-variants__item radio-button col-md-4 col-sm-4 col-xs-4">
                           <div class="product-variant-choice-border">
                           <input type="radio" name="sku" id="sku_80194602" value="80194601" required="required" class="product-variants__input radio-button__input">
@@ -254,7 +254,6 @@
                           </label>
                           </div>
                         </div>
-
                         <div class="product-variants__item radio-button col-md-4 col-sm-4 col-xs-4">
                           <div class="product-variant-choice-border product-variant-choice-choosen">
                           <input type="radio" name="sku" id="sku_80194603" value="80194601" required="required" class="product-variants__input radio-button__input">
@@ -278,8 +277,40 @@
                           </label>
                           </div>
                         </div>
-
                       </div>
+                      <!--时间规划框-->
+                      
+                      <div id="date-picker"></div>
+                      <div class="product-details__shipping-date-container col-md-6 col-sm-6">
+                      	<div class="date-picker-border">
+	                        <div class="product-details__shipping-date">
+	                          <label class="product-details__shipping-date-label" for="delivery_date_catalog_product">
+	                           	<span class="product-details__shipping-date-icon glyphicon glyphicon-calendar"></span>
+	                            <span class="product-details__shipping-date-value">Pick a date</span>
+	                            <div class="product-details__shipping-date-input">
+	                                <input type="text" name="delivery_date" id="delivery_date_catalog_product" class="text-box text-box--small product-details__delivery-date-input hasDatepicker" placeholder="yyyy-mm-dd" readonly="readonly">
+	                                 
+	                            </div>
+	                           </label>
+	                         </div>
+                         </div>
+                      </div>
+
+                      <div class="product-details__shipping-date-container col-md-6 col-sm-6">
+                      	<div class="date-picker-border">
+	                        <div class="product-details__shipping-date">
+	                          <label class="product-details__shipping-date-label" for="delivery_date_catalog_product">
+	                           	<span class="product-details__shipping-vase-icon"><img src="/images/product_detail/vase.png" style="width: 90px;height: 90px;"/></span>
+	                            <span class="product-details__shipping-vase-value">
+	                            	<!--<input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="0">
+                                    <label for="styled-checkbox-1">花瓶也要</label>-->
+                                    <label><input type="checkbox"><span></span></label>
+	                            </span>
+	                           </label>
+	                         </div>
+                         </div>
+                      </div>
+
 
                   </form>
                 </div>
@@ -358,7 +389,20 @@
                 onSliderLoad: function() {
                     $('#image-gallery').removeClass('cS-hidden');
                 }  
-              });              
+              });
+              $('#date-picker').calendar({
+		            trigger: '#delivery_date_catalog_product',
+		            width: 320,
+                    height: 320,
+		            zIndex: 999,
+		            onSelected: function (view, date, data) {
+
+		            },
+		            onClose: function (view, date, data) {
+		                var date_text = $("#delivery_date_catalog_product").val();
+		                $('.product-details__shipping-date-value').text(date_text);
+		            }
+		      });     
         });
     </script>
 </body>
