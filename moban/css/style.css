@@ -4,6 +4,9 @@ body a {
   color: #333333;
   cursor: pointer;
 }
+.stop-flow {
+  overflow: hidden;
+}
 .fixed-top {
   width: 100%;
   height:100px;
@@ -167,6 +170,9 @@ body a {
   text-align: center;
   color: #aab2bd;
 }
+#shop-menu-popup {
+  -webkit-overflow-scrolling: touch;
+}
 /*手机端代码*/
 @media ( max-width:767px ) {
   body {
@@ -210,7 +216,7 @@ body a {
     border-top: 1px solid #b7b7b7;
     border-bottom: 1px solid #b7b7b7;
     overflow-y: scroll;
-    height: 800px;
+    height: 100%;
     position: fixed;
     top: 0;
     width: 91%;

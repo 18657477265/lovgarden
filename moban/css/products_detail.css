@@ -115,6 +115,137 @@
   .product-variants__item {
     padding: 3px;
   }
+
+  /*datepicker 位置*/
+  ul,ol,li 
+  {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+  }
+  #shop-menu-popup ul {
+    padding-left: 30px;
+  }
+  #date-picker {
+    position: absolute;
+    top: 10% !important;
+    left: 10% !important;
+    -moz-box-shadow: 10px 10px 20px #888888; /* 老的 Firefox */
+    box-shadow: 10px 10px 20px #888888;
+  }
+  .calendar-hd {
+    height: 100px;
+    line-height: 100px;
+    background-color: orange;
+    padding: 0;
+  }
+  .calendar-hd a , .calendar-hd span{
+    text-decoration: none;
+    color: #fff !important;
+  }
+  .calendar-hd span:hover {
+    color: #fff !important;
+  }
+  .calendar-arrow {
+    height: 100px;
+    line-height: 100px;
+  }
+  .calendar-arrow span {
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+  }
+  .calendar .calendar-views .selected {
+    color: #fff;
+    background-color: orange !important;
+  }
+  .calendar .days li[data-calendar-day]:hover, .calendar .view-month li[data-calendar-month]:hover {
+    background: orange;
+  }
+  .product-details__shipping-date-container {
+    height: 120px;
+  }
+  .date-picker-border {
+    border: 1px solid #e1dfdf;
+    height: 100%;
+  }
+  .product-details__shipping-date {
+    height: 100%;
+  }
+  .product-details__shipping-date-label {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+  }
+  .product-details__shipping-date-input input {
+    opacity: 0;
+  }
+  .product-details__shipping-date-value {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 50%;
+    color: orange;
+  }
+  .product-details__shipping-date-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 31%;
+    color: orange;
+    font-size: 45px;
+  }
+  .product-details__shipping-vase-value {
+    display: block;
+    position: absolute;
+    top: 75%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 50%;
+    color: orange;
+    font-size: 15px;
+  }
+  .product-details__shipping-vase-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 8%;
+    color: orange;
+    font-size: 45px;
+  }
+  .product-details__shipping-vase-value input[type="checkbox"]{appearance: none; -webkit-appearance: none;outline: none;display:none}
+  .product-details__shipping-vase-value label{width:100px;height:100px;display:inline-block;cursor:pointer;}
+  .product-details__shipping-vase-value label input[type="checkbox"] + span{width:40px;height:40px;display:inline-block;background:url("/images/product_detail/vase_checkout.jpg")  no-repeat;background-position:0 0;background-size: 40px;}
+  .product-details__shipping-vase-value label input[type="checkbox"]:checked + span{background-position:0 -42px;background-size: 40px;}
+  .product-details__shipping-date-container h4 , .product-details__shipping-date-container h4 {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .product-details__vase-container {
+    margin-top: 200px;
+    margin-bottom: 35px
+  }
 }
 /*products detail小屏幕手机端样式*/
 @media ( max-width:320px) {
@@ -231,6 +362,14 @@
   }
   .product-variants__item {
     padding: 3px;
+  }
+  /*date picker 位置*/
+  #date-picker {
+    position: absolute;
+    top: 10% !important;
+    left: 0 !important;
+    -moz-box-shadow: 10px 10px 20px #888888; /* 老的 Firefox */
+    box-shadow: 10px 10px 20px #888888;
   }
 }
 /*products detail页面PC端样式*/
@@ -438,13 +577,13 @@
   .product-details__shipping-vase-value {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 75%;
     -ms-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -o-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    left: 53%;
+    left: 30%;
     color: orange;
     font-size: 15px;
   }
@@ -461,10 +600,13 @@
     color: orange;
     font-size: 45px;
   }
-  input[type="checkbox"]{appearance: none; -webkit-appearance: none;outline: none;display:none}
-  label{width:100px;height:100px;display:inline-block;cursor:pointer;}
-  label input[type="checkbox"] + span{width:20px;height:20px;display:inline-block;background:url(http://sandbox.runjs.cn/uploads/rs/216/0y89gzo2/checkbox_01.gif)  no-repeat;background-position:0 0;}
-  label input[type="checkbox"]:checked + span{background-position:0 -21px}
+  .product-details__shipping-vase-value input[type="checkbox"]{appearance: none; -webkit-appearance: none;outline: none;display:none}
+  .product-details__shipping-vase-value label{width:100px;height:100px;display:inline-block;cursor:pointer;}
+  .product-details__shipping-vase-value label input[type="checkbox"] + span{width:40px;height:40px;display:inline-block;background:url("/images/product_detail/vase_checkout.jpg")  no-repeat;background-position:0 0;background-size: 40px;}
+  .product-details__shipping-vase-value label input[type="checkbox"]:checked + span{background-position:0 -42px;background-size: 40px;}
+  .product-details__shipping-date-container h4 , .product-details__shipping-date-container h4 {
+    text-align: center;
+  }
 }
 /*products detail页面平板端样式*/
 @media ( min-width:768px ) and ( max-width:1199px ) {
@@ -577,6 +719,130 @@
   }
   input[name="sku"] {
     opacity: 0;
+  }
+
+  /*datepicker 位置*/
+  ul,ol,li 
+  {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+  }
+  #date-picker {
+    position: absolute;
+    top: 10% !important;
+    left: 10% !important;
+    -moz-box-shadow: 10px 10px 20px #888888; /* 老的 Firefox */
+    box-shadow: 10px 10px 20px #888888;
+  }
+  .calendar-hd {
+    height: 100px;
+    line-height: 100px;
+    background-color: orange;
+    padding: 0;
+  }
+  .calendar-hd a , .calendar-hd span{
+    text-decoration: none;
+    color: #fff !important;
+  }
+  .calendar-hd span:hover {
+    color: #fff !important;
+  }
+  .calendar-arrow {
+    height: 100px;
+    line-height: 100px;
+  }
+  .calendar-arrow span {
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+  }
+  .calendar .calendar-views .selected {
+    color: #fff;
+    background-color: orange !important;
+  }
+  .calendar .days li[data-calendar-day]:hover, .calendar .view-month li[data-calendar-month]:hover {
+    background: orange;
+  }
+  .product-details__shipping-date-container {
+    height: 120px;
+  }
+  .date-picker-border {
+    border: 1px solid #e1dfdf;
+    height: 100%;
+  }
+  .product-details__shipping-date {
+    height: 100%;
+  }
+  .product-details__shipping-date-label {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+  }
+  .product-details__shipping-date-input input {
+    opacity: 0;
+  }
+  .product-details__shipping-date-value {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 60%;
+    color: orange;
+  }
+  .product-details__shipping-date-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 31%;
+    color: orange;
+    font-size: 45px;
+  }
+  .product-details__shipping-vase-value {
+    display: block;
+    position: absolute;
+    top: 75%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 60%;
+    color: orange;
+    font-size: 15px;
+  }
+  .product-details__shipping-vase-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    left: 8%;
+    color: orange;
+    font-size: 45px;
+  }
+  .product-details__shipping-vase-value input[type="checkbox"]{appearance: none; -webkit-appearance: none;outline: none;display:none}
+  .product-details__shipping-vase-value label{width:100px;height:100px;display:inline-block;cursor:pointer;}
+  .product-details__shipping-vase-value label input[type="checkbox"] + span{width:40px;height:40px;display:inline-block;background:url("/images/product_detail/vase_checkout.jpg")  no-repeat;background-position:0 0;background-size: 40px;}
+  .product-details__shipping-vase-value label input[type="checkbox"]:checked + span{background-position:0 -42px;background-size: 40px;}
+  .product-details__shipping-date-container h4 , .product-details__shipping-date-container h4 {
+    margin-top: 50px;
+    text-align: center;
   }
 }
 .product-detail-big-img {

@@ -1,5 +1,8 @@
 @charset "UTF-8"; 
 /*左边黑框描述，右边图片block样式*/
+#mobile-filter-section {
+  -webkit-overflow-scrolling: touch;
+}
 .category-banner-content-block__content {
 	background-color: #666666;
 	padding-top: 5%;
@@ -313,7 +316,7 @@
     background-repeat: no-repeat;
   }
   #mobile-filter-section {
-    height: 700px !important;
+    height: 700px;
     display: block;
     position: fixed;
     top: 0px;
@@ -668,7 +671,7 @@
     background-repeat: no-repeat;
   }
   #mobile-filter-section {
-    height: 700px !important;
+    height: 700px;
     display: block;
     position: fixed;
     top: 0px;
@@ -1196,7 +1199,7 @@
     background-repeat: no-repeat;
   }
   #mobile-filter-section {
-    height: 700px !important;
+    height: 700px;
     display: block;
     position: fixed;
     top: 0px;

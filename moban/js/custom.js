@@ -176,20 +176,26 @@ $(function(){
 
 	   /*关闭按钮*/
 	   $('.filter-mobile-popup-title').on('click',function() {
+	   	  $('body').removeClass("stop-flow");
           $('#mobile-filter-section').fadeOut(300);
 	   });
 	   /*开启按钮*/
 	   $(".mobile-filter").on('click',function() {
+	   	  $('#mobile-filter-section').css('height',$(window).height());
+	   	  $('body').addClass("stop-flow");
           $('#mobile-filter-section').fadeIn(300);
 	   });
 
    }
    else if (device == 'mobile') {
 	   $('.mobile-menu-show').on('click',function(e) {
+	   	  $('body').addClass("stop-flow");
+	   	  $('#mobile-menu-section').css('height',$(window).height());
 	   	  $('#mobile-menu-section').show();
 	   });
 
 	   $('.mobile-menu-close').on('click',function(e) {
+	   	  $('body').removeClass("stop-flow");
 	   	  $('#mobile-menu-section').hide();
 	   });
 
@@ -346,10 +352,15 @@ $(function(){
 
 	   /*关闭按钮*/
 	   $('.filter-mobile-popup-title').on('click',function() {
+	   	  if ($('body').hasClass("stop-flow")) {
+             $('body').removeClass("stop-flow");
+          }
           $('#mobile-filter-section').fadeOut(300);
 	   });
 	   /*开启按钮*/
 	   $(".mobile-filter").on('click',function() {
+	   	  $('body').addClass("stop-flow");
+	   	  $('#mobile-filter-section').css('height',$(window).height()+'px');
           $('#mobile-filter-section').fadeIn(300);
 	   });
 

@@ -282,6 +282,7 @@
                       
                       <div id="date-picker"></div>
                       <div class="product-details__shipping-date-container col-md-6 col-sm-6">
+                      	<h4>请选择配送日期</h4>
                       	<div class="date-picker-border">
 	                        <div class="product-details__shipping-date">
 	                          <label class="product-details__shipping-date-label" for="delivery_date_catalog_product">
@@ -296,7 +297,8 @@
                          </div>
                       </div>
 
-                      <div class="product-details__shipping-date-container col-md-6 col-sm-6">
+                      <div class="product-details__shipping-date-container product-details__vase-container col-md-6 col-sm-6">
+                      	<h4>是否需要花瓶？</h4>
                       	<div class="date-picker-border">
 	                        <div class="product-details__shipping-date">
 	                          <label class="product-details__shipping-date-label" for="delivery_date_catalog_product">
@@ -304,7 +306,7 @@
 	                            <span class="product-details__shipping-vase-value">
 	                            	<!--<input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="0">
                                     <label for="styled-checkbox-1">花瓶也要</label>-->
-                                    <label><input type="checkbox"><span></span></label>
+                                    <label><input type="checkbox" name="vase_buy" value="0"><span></span></label>
 	                            </span>
 	                           </label>
 	                         </div>
@@ -390,6 +392,7 @@
                     $('#image-gallery').removeClass('cS-hidden');
                 }  
               });
+              
               $('#date-picker').calendar({
 		            trigger: '#delivery_date_catalog_product',
 		            width: 320,
