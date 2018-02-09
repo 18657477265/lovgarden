@@ -246,6 +246,33 @@
     margin-top: 200px;
     margin-bottom: 35px
   }
+  /*Add to cart button*/
+  .add-to-cart {
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .add-to-cart button {
+    height: 50px;
+    width: auto;
+    border-radius: 3px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    padding: 9px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffa600;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 230px;
+  }
 }
 /*products detail小屏幕手机端样式*/
 @media ( max-width:320px) {
@@ -607,6 +634,33 @@
   .product-details__shipping-date-container h4 , .product-details__shipping-date-container h4 {
     text-align: center;
   }
+  /*Add to cart button*/
+  .add-to-cart {
+    height: 50px;
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
+  }
+  .add-to-cart button {
+    height: 50px;
+    width: auto;
+    border-radius: 3px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    padding: 9px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffa600;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 230px;
+  }
 }
 /*products detail页面平板端样式*/
 @media ( min-width:768px ) and ( max-width:1199px ) {
@@ -844,6 +898,35 @@
     margin-top: 50px;
     text-align: center;
   }
+  /*Add to cart button*/
+  .add-to-cart {
+    height: 50px;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .add-to-cart button {
+    height: 50px;
+    width: auto;
+    border-radius: 3px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    padding: 9px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffa600;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 230px;
+  }
+
+
 }
 .product-detail-big-img {
   width: 100%;
@@ -851,5 +934,11 @@
 .farm_vendor_info a img {
   width: 100%;
 }
-
-
+.product-info-plus {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e1dfdf;
+}
+.product-detail-region {
+  margin-bottom: 70px;
+}
