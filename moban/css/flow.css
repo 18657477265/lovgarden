@@ -198,11 +198,161 @@
   .price-list-mobile {
     margin-top: 50px;
   }
+  /*flow2 form样式*/
+  .input-wrapper {
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  #first_name , #last_name , #phone_number , #address_detail_location , #zip_code {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-indent: 20px;
+    border: 1px solid #c8c5c5;
+    border-radius: 5px;
+  }
+  .deliver-info-form , .deliver-info-form-left {
+    padding: 0;
+  }
+  .deliver-info-form-right {
+    padding: 0;
+  }
+  .input-select-info-source {
+    padding-right: 0;
+    width: 100%;
+  }
+  #order_item_info_source {
+    width: 100%;
+    height: 40px;
+    text-indent: 20px;
+    border: 1px solid #c8c5c5;
+    border-radius: 5px;
+  }
+  .nice-select {
+    width: 100%;
+  }
+  .nice-select .list {
+    width: 100%;
+  }
+  .nice-select .list li {
+    width: 100%;
+  }
+  .nice-select .option:hover {
+    background-color: orange !important;
+    color: #fff;
+  }
+  .input-wrapper-address {
+    text-align: left;
+  }
+  .checkout-addresses__heading {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  #message_order {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #c8c5c5;
+  }
+  .deliver-info-form {
+    margin-bottom: 20px;
+  }
+  .products-list-flow2 {
+    margin-bottom: 20px;
+    margin-top: 185px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #c8c5c5;
+    border-top: 1px solid #c8c5c5;
+  }
+  .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+    background-color: orange;
+  }
+  /*支付成功跳转页面*/
+  .flow3-background {
+    position: relative;
+  }
+  .flow3-success-message {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.7);
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 0;
+  }
+  .flow3-background p {
+    text-align: center;
+    color: #000;
+  }
+  .flow3-background p a {
+    display: inline-block;
+    color: #000;
+    margin: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  .flow3-background p a:hover {
+    text-decoration: none;
+    color: orange;
+  }
+  .ok-icon {
+    font-size: 25px;
+    display: inline-block;
+    width: 50px;
+    color: green;
+  }
 }
 /*products checkout flow1 小屏幕手机端样式*/
 @media ( max-width:320px) {
   .flow-check-each-price span , p {
     font-size: 13px;
+  }
+  .product-small-img {
+    padding-left: 10px;
+  }
+  /*支付成功跳转页面*/
+  .flow3-background {
+    position: relative;
+  }
+  .flow3-success-message {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.7);
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 3%;
+    padding-bottom: 0;
+  }
+  .flow3-background p {
+    text-align: center;
+    color: #000;
+  }
+  .flow3-success-message p a {
+    display: inline-block;
+    color: #000;
+    margin: 20px;
+    margin-bottom: 0px;
+    text-decoration: none;
+  }
+  .flow3-success-message p a:hover {
+    color: orange;
+    text-decoration: none;
+  }
+  .ok-icon {
+    font-size: 25px;
+    display: inline-block;
+    width: 50px;
+    color: green;
   }
 }
 /*products checkout flow1 页面PC端样式*/
@@ -370,6 +520,110 @@
     height: 50px;
     line-height: 50px;
     color: #807d7d;
+  }
+  /*flow2 form样式*/
+  .input-wrapper {
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  #first_name , #last_name , #phone_number , #address_detail_location , #zip_code {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-indent: 20px;
+    border: 1px solid #c8c5c5;
+    border-radius: 5px;
+  }
+  .deliver-info-form , .deliver-info-form-left {
+    padding: 0;
+  }
+  .deliver-info-form-right {
+    padding: 0;
+  }
+  .input-select-info-source {
+    padding-right: 0;
+    width: 100%;
+  }
+  #order_item_info_source {
+    width: 100%;
+    height: 40px;
+    text-indent: 20px;
+    border: 1px solid #c8c5c5;
+    border-radius: 5px;
+  }
+  .nice-select {
+    width: 100%;
+  }
+  .nice-select .list {
+    width: 100%;
+  }
+  .nice-select .list li {
+    width: 100%;
+  }
+  .nice-select .option:hover {
+    background-color: orange !important;
+    color: #fff;
+  }
+  .input-wrapper-address {
+    text-align: left;
+  }
+  .checkout-addresses__heading {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  #message_order {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #c8c5c5;
+  }
+  .deliver-info-form {
+    margin-bottom: 20px;
+  }
+  .products-list-flow2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #c8c5c5;
+    border-top: 1px solid #c8c5c5;
+  }
+  /*支付成功跳转页面*/
+  .flow3-background {
+    position: relative;
+  }
+  .flow3-success-message {
+    position: absolute;
+    top: 28%;
+    left: 26%;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.7);
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5%;
+  }
+  .flow3-background p {
+    text-align: center;
+    color: #000;
+  }
+  .flow3-background p a {
+    display: inline-block;
+    color: #000;
+    margin: 20px;
+    text-decoration: none;
+  }
+  .flow3-background p a:hover {
+    text-decoration: none;
+    color: orange;
+  }
+  .ok-icon {
+    font-size: 25px;
+    display: inline-block;
+    width: 50px;
+    color: green;
   }
 }
 /*products checkout flow1页面平板端样式*/
@@ -546,9 +800,118 @@
   p {
     font-size: 15px;
   }
+  /*flow2 form样式*/
+  .input-wrapper {
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  #first_name , #last_name , #phone_number , #address_detail_location , #zip_code {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-indent: 20px;
+    border: 1px solid #c8c5c5;
+    border-radius: 5px;
+  }
+  .deliver-info-form , .deliver-info-form-left {
+    padding: 0;
+  }
+  .deliver-info-form-right {
+    padding: 0;
+  }
+  .input-select-info-source {
+    padding-right: 0;
+    width: 100%;
+  }
+  #order_item_info_source {
+    width: 100%;
+    height: 40px;
+    text-indent: 20px;
+    border: 1px solid #c8c5c5;
+    border-radius: 5px;
+  }
+  .nice-select {
+    width: 100%;
+  }
+  .nice-select .list {
+    width: 100%;
+  }
+  .nice-select .list li {
+    width: 100%;
+  }
+  .nice-select .option:hover {
+    background-color: orange !important;
+    color: #fff;
+  }
+  .input-wrapper-address {
+    text-align: left;
+  }
+  .checkout-addresses__heading {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  #message_order {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #c8c5c5;
+  }
+  .deliver-info-form {
+    margin-bottom: 20px;
+  }
+  .products-list-flow2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #c8c5c5;
+    border-top: 1px solid #c8c5c5;
+  }
+  .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+    background-color: orange;
+  }
+  /*支付成功跳转页面*/
+  .flow3-background {
+    position: relative;
+  }
+  .flow3-success-message {
+    position: absolute;
+    top: 15%;
+    left: 26%;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.7);
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5%;
+  }
+  .flow3-background p {
+    text-align: center;
+    color: #000;
+  }
+  .flow3-background p a {
+    display: inline-block;
+    color: #000;
+    margin: 20px;
+    text-decoration: none;
+  }
+  .flow3-background p a:hover {
+    text-decoration: none;
+    color: orange;
+  }
+  .ok-icon {
+    font-size: 25px;
+    display: inline-block;
+    width: 50px;
+    color: green;
+  }
 
 }
-
+.coupin-code-info {
+  text-align: center;
+}
 .flow-top-banner {
   width: 100%;
   height: 100px;

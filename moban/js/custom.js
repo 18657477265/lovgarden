@@ -27,8 +27,18 @@ $(function(){
    //product detail 页面中的datepicker点击事件
    $("#delivery_date_catalog_product").on('change',function() {
    	alert($(this).val());
-   })
-
+   });
+   //login页面注册和登录框互相转换
+   $("a.click-to-signup").on('click',function(event) {
+   	  event.preventDefault(); 
+      $('.singup-block').css('display','block');
+      $('.login-block').css('display','none');
+   });
+   $("a.click-to-login").on('click',function(event) {
+   	  event.preventDefault(); 
+      $('.singup-block').css('display','none');
+      $('.login-block').css('display','block');
+   });
    var device = equipmentCheck();
    if(device == 'pc') {
 	   $("#shop-market").hover(function(){
